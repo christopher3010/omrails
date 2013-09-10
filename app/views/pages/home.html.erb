@@ -1,11 +1,19 @@
-<div class="hero-unit">
+
+<div class="page-header">
 	<h1>Welcome to my amazing website!</h1>
+</div>
+
+
+
+
+<div class="hero-unit">
+
 	<p>
 		You've found the home page for the
 	  <%= link_to "One Month Rails", "http://onemonthrails.com" %>
 	  application.
 	</p>
 	<p>
-			<%= link_to "Sign Up Now!", "#", class:"btn btn-primary btn-large" %>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 	</p>
 </div>
