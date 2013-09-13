@@ -5,7 +5,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem "cocaine", "0.5"
-gem "paperclip", "3.4.1"
+gem "paperclip", "~> 3.4.2"
 gem 'aws-sdk'
 gem 'figaro'
 
