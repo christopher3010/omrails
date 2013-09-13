@@ -22,3 +22,6 @@ doc/
 
 # Ignore Paperclip uploaded files
 /public/syst
+
+# Ignore application configuration
+/config/application.yml

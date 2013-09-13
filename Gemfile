@@ -7,6 +7,7 @@ gem 'simple_form'
 gem "cocaine", "0.5"
 gem "paperclip", "3.4.1"
 gem 'aws-sdk'
+gem 'figaro'
 
 group :production do
 	gem 'pg'
