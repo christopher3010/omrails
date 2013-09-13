@@ -8,6 +8,7 @@ gem "cocaine", "0.5"
 gem "paperclip", "~> 3.4.2"
 gem 'aws-sdk'
 gem 'figaro'
+gem 'faker'
 
 group :production do
 	gem 'pg'
