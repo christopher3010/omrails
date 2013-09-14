@@ -64,6 +64,7 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    galetahub-simple_captcha (0.1.5)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -155,6 +156,7 @@ DEPENDENCIES
   devise
   faker
   figaro
+  galetahub-simple_captcha
   jquery-rails
   paperclip (~> 3.4.2)
   pg

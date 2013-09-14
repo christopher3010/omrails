@@ -1,3 +1,7 @@
+
+
+
+
 class PinsController < ApplicationController
   before_filter :authenticate_user!, except: [:index]
   # GET /pins
@@ -41,18 +45,26 @@ class PinsController < ApplicationController
   # POST /pins
   # POST /pins.json
   def create
-    @pin = current_user.pins.new(params[:pin])
-
-    respond_to do |format|
-      if @pin.save
-        format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
-        format.json { render json: @pin, status: :created, location: @pin }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @pin.errors, status: :unprocessable_entity }
-      end
+    if simple_captcha_valid?
+      @pin = current_user.pins.new(params[:pin])
+        respond_to do |format|
+          if @pin.save 
+            format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
+            format.json { render json: @pin, status: :created, location: @pin }
+          else
+            format.html { render action: "new" }
+            format.json { render json: @pin.errors, status: :unprocessable_entity }
+          end
+        end   
+    else
+      redirect_to :back, notice: 'Wrong Captcha!'
     end
   end
+
+
+
+
+    
 
   # PUT /pins/1
   # PUT /pins/1.json

@@ -10,6 +10,7 @@ gem 'aws-sdk'
 gem 'figaro'
 gem 'faker'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem "galetahub-simple_captcha", :require => "simple_captcha"
 
 group :production do
 	gem 'pg'
