@@ -1,5 +1,5 @@
 class Pin < ActiveRecord::Base
-   attr_accessible :description, :image, :image_remote_url # This line won't work in Rails 4, instead, you'll have to do what I show below
+   attr_accessible :pintitle, :description, :image, :image_remote_url # This line won't work in Rails 4, instead, you'll have to do what I show below
 
   validates :description, presence: true
   validates :user_id, presence: true

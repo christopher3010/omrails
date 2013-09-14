@@ -1,7 +1,3 @@
-
-
-
-
 class PinsController < ApplicationController
   before_filter :authenticate_user!, except: [:index]
   # GET /pins
@@ -60,11 +56,6 @@ class PinsController < ApplicationController
       redirect_to :back, notice: 'Wrong Captcha!'
     end
   end
-
-
-
-
-    
 
   # PUT /pins/1
   # PUT /pins/1.json

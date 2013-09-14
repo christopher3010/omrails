@@ -1,12 +1,15 @@
 <div class="row">
     <div class="span6 offset3">
         <div class="well">
+            <p>
+                <h3><%= @pin.pintitle %></h3>
+            </p>
             <%= image_tag @pin.image, :class => 'img-rounded' %>
             <p>
               <%= @pin.description %>
             </p>
             <p>
-              <%= @pin.user.name %>
+              <small><%= @pin.user.name %></small>
             </p>
             <% if current_user == @pin.user %>
                 <%= link_to 'Edit', edit_pin_path(@pin) %> |
